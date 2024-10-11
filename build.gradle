@@ -151,8 +151,8 @@ dependencies {
 
 mixin {
     // MixinGradle Settings
-    add sourceSets.main, 'mixins.tutorialmod.refmap.json'
-    config 'mixins.tutorialmod.json'
+    add sourceSets.main, 'mixins.enhancedsoulspeed.refmap.json'
+    config 'mixins.enhancedsoulspeed.json'
     debug.verbose = true
     debug.export = true
 }
