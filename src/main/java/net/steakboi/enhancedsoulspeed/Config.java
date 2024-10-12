@@ -1,7 +1,35 @@
 package net.steakboi.enhancedsoulspeed;
 
+import net.minecraft.advancements.critereon.EntityFlagsPredicate;
+import net.minecraft.advancements.critereon.EntityPredicate;
+import net.minecraft.advancements.critereon.LocationPredicate;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.util.valueproviders.ConstantFloat;
+import net.minecraft.util.valueproviders.UniformFloat;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
+import net.minecraft.world.item.enchantment.LevelBasedValue;
+import net.minecraft.world.item.enchantment.effects.DamageItem;
+import net.minecraft.world.item.enchantment.effects.EnchantmentAttributeEffect;
+import net.minecraft.world.item.enchantment.effects.PlaySoundEffect;
+import net.minecraft.world.item.enchantment.effects.SpawnParticlesEffect;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.predicates.*;
+import net.minecraft.world.level.storage.loot.providers.number.EnchantmentLevelProvider;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -11,6 +39,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import static net.minecraft.world.item.enchantment.Enchantments.SOUL_SPEED;
 
 // An example config class. This is not required, but it's a good idea to have one to keep your config organized.
 // Demonstrates how to use Forge's config APIs
