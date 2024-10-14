@@ -14,7 +14,6 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -34,7 +33,7 @@ public abstract class EnhancedSoulSpeedMixin{
 			try {
 				EntityAttributeInstance attributeinstance = this_cast.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED);
 				attributeinstance.removeModifier(SOUL_SPEED_SPRINTING_MODIFIER_ID);
-				if (this_cast.isSprinting() && this_cast.getWorld().getBlockState(this_cast.getSteppingPos()).isIn(BlockTags.SOUL_SPEED_BLOCKS)) {
+				if (this_cast.isSprinting() && this_cast.getWorld().getBlockState(this_cast.getVelocityAffectingPos()).isIn(BlockTags.SOUL_SPEED_BLOCKS)) {
 					PlayerEntity Player_this = (PlayerEntity) (Object) this;
 					ItemStack boots = Player_this.getInventory().getArmorStack(0);
 					Set<Object2IntMap.Entry<RegistryEntry<Enchantment>>> Enchantment_set = boots.getEnchantments().getEnchantmentEntries();
