@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "net.steakboi.tutorialmod.mixin",
+	"package": "net.steakboi.enhancedsoulspeed.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"EnhancedSoulSpeedMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

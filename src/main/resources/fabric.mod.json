@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "tutorialmod",
+	"id": "enhancedsoulspeed",
 	"version": "${version}",
-	"name": "Tutorial Mod",
-	"description": "This is an Tutorial Mod",
+	"name": "Enhanced Soul Speed",
+	"description": "Increased the potency of the soul speed enchantment",
 	"authors": [
 		"Me!"
 	],
@@ -12,24 +12,24 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/tutorialmod/icon.png",
+	"icon": "assets/enhancedsoulspeed/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.steakboi.tutorialmod.TutorialMod"
+			"net.steakboi.enhancedsoulspeed.EnhancedSoulSpeed"
 		],
 		"fabric-datagen": [
-			"net.steakboi.tutorialmod.TutorialModDataGenerator"
+			"net.steakboi.enhancedsoulspeed.EnhancedSoulSpeedDataGenerator"
 		],
 		"client": [
-			"net.steakboi.tutorialmod.TutorialModClient"
+			"net.steakboi.enhancedsoulspeed.EnhancedSoulSpeedClient"
 		]
 	},
 	"mixins": [
-		"tutorialmod.mixins.json"
+		"enhancedsoulspeed.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.7",
+		"fabricloader": ">=0.16.3",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
