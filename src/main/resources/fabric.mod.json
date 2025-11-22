@@ -3,7 +3,7 @@
 	"id": "enhancedsoulspeed",
 	"version": "${version}",
 	"name": "Enhanced Soul Speed",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Increased the potency of the soul speed enchantment",
 	"authors": [
 		"Me!"
 	],
@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/enhancedsoulspeed/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -29,7 +29,7 @@
 		"enhancedsoulspeed.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.1",
+		"fabricloader": ">=0.17.3",
 		"minecraft": "~1.21.10",
 		"java": ">=21",
 		"fabric-api": "*"
