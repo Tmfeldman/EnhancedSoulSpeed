@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "timomod",
+	"id": "enhancedsoulspeed",
 	"version": "${version}",
-	"name": "TimoMod",
+	"name": "Enhanced Soul Speed",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/timomod/icon.png",
+	"icon": "assets/enhancedsoulspeed/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.steakboi.timomod.TimoMod"
+			"net.steakboi.enhancedsoulspeed.EnhancedSoulSpeed"
 		],
 		"fabric-datagen": [
-			"net.steakboi.timomod.TimoModDataGenerator"
+			"net.steakboi.enhancedsoulspeed.EnhancedSoulSpeedDataGenerator"
 		],
 		"client": [
-			"net.steakboi.timomod.TimoModClient"
+			"net.steakboi.enhancedsoulspeed.EnhancedSoulSpeedClient"
 		]
 	},
 	"mixins": [
-		"timomod.mixins.json"
+		"enhancedsoulspeed.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.1",
